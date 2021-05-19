@@ -17,15 +17,38 @@
 
 .app-navigation {
   grid-area: app-navigation;
-  background-color: aliceblue;
+  background-color: white;
 }
 
 .app-content {
   grid-area: app-content;
-  background-color: azure;
+  background-color: white;
+}
+
+.content-header img {
+  opacity: 0.7;
 }
 
 .content-logo img {
   width: 200px;
   height: 100%;
+  opacity: 0.7;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  height: 50px;
+  border: 1px dotted black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }

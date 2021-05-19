@@ -5,19 +5,19 @@ const Navbar = () => {
       <nav className='app-navigation'>
         <ul>
           <li>
-            <a href='#'>My Profile</a>
+            <a href='#'>MY PROFILE</a>
           </li>
           <li>
-            <a href='#'>Messages</a>
+            <a href='#'>MESSAGES</a>
           </li>
           <li>
-            <a href='#'>News</a>
+            <a href='#'>NEWS</a>
           </li>
           <li>
-            <a href='#'>Music</a>
+            <a href='#'>MUSIC</a>
           </li>
           <li>
-            <a href='#'>Settings</a>
+            <a href='#'>SETTINGS</a>
           </li>
         </ul>
       </nav>
