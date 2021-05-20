@@ -1,32 +1,26 @@
-import React from "react";
+import React from 'react';
 import classes from './Profile.module.css';
+import MyPosts from './MyPosts/MyPosts.jsx';
 
 const Profile = () => {
   return (
       <div className={classes.content}>
         <div className={classes.header}>
-          <img src='../pictures/bar-wine-whats-next-bar.jpg' width='1000' height='200' alt='Some random bar photo'/>
+          <img src='../pictures/cropped-beer-nice.jpg' width='1000' height='120' alt='Some random beer photo'/>
         </div>
-        <div className={classes.avatar}>
-          <img src='https://image.freepik.com/free-vector/gamer-mascot-geek-boy-esports-logo-avatar-with-headphones-and-glasses-cartoon-character_8169-228.jpg'/>
-        </div>
-        <div className={classes.aboutMe}>
-          description
-        </div>
-        <div className={classes.posts}>
-          My posts
-          <div className={classes.newPost}>
-            New Post
+        <div className={classes.aboutContainer}>
+          <div className={classes.avatar}>
+            <img
+                src='https://image.freepik.com/free-vector/gamer-mascot-geek-boy-esports-logo-avatar-with-headphones-and-glasses-cartoon-character_8169-228.jpg'
+                alt='User avatar'/>
           </div>
-          <div className={classes.existingPosts}>
-            Existing posts
-            <div className={classes.post}>
-              post 1
-            </div>
-            <div className={classes.post}>
-              post 2
-            </div>
+          <div className={classes.aboutMe}>
+            <div>Name: Roman</div>
+            <div>Age: 37</div>
           </div>
+        </div>
+        <div className={classes.postsContainer}>
+          <MyPosts/>
         </div>
       </div>
   );

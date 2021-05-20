@@ -1,17 +1,17 @@
 .navigation {
     grid-area: app-navigation;
-    background-color: wheat;
+    background-color: #000000;
 }
 
 .items {
     margin: 0;
-    padding: 0;
+    padding: 15px 5px 5px 20px;
     list-style-type: none;
 }
 
 .item {
     height: 50px;
-    padding: 20px;
+    padding: 5px;
 }
 
 .itemLink {
