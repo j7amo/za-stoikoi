@@ -16,3 +16,15 @@
     background-color: white;
     border-radius: 5px;
 }
+
+.likesButton {
+    width: 50px;
+    padding: 10px;
+    margin: 0 0 0 20px;
+}
+
+.likesCountContainer {
+    width: 50px;
+    padding: 10px;
+    margin: 0 100px 0 10px;
+}

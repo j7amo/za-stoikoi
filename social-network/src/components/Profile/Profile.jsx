@@ -4,9 +4,9 @@ import MyPosts from './MyPosts/MyPosts.jsx';
 
 const Profile = () => {
   return (
-      <div className={classes.content}>
+      <div>
         <div className={classes.header}>
-          <img src='../pictures/cropped-beer-nice.jpg' width='1000' height='120' alt='Some random beer photo'/>
+          <img src='../pictures/cropped-beer-nice.jpg' height='120' alt='Some random beer photo'/>
         </div>
         <div className={classes.aboutContainer}>
           <div className={classes.avatar}>

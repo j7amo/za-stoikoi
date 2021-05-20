@@ -6,19 +6,19 @@ const Navbar = () => {
       <nav className={classes.navigation}>
         <ul className={classes.items}>
           <li className={classes.item}>
-            <a className={`${classes.itemLink} ${classes.itemLinkActive}`} href='#'>MY PROFILE</a>
+            <a className={`${classes.itemLink} ${classes.itemLinkActive}`} href='/profile'>MY PROFILE</a>
           </li>
           <li className={classes.item}>
-            <a className={classes.itemLink} href='#'>MESSAGES</a>
+            <a className={classes.itemLink} href='/dialogs'>MESSAGES</a>
           </li>
           <li className={classes.item}>
-            <a className={classes.itemLink} href='#'>NEWS</a>
+            <a className={classes.itemLink} href='/news'>NEWS</a>
           </li>
           <li className={classes.item}>
-            <a className={classes.itemLink} href='#'>MUSIC</a>
+            <a className={classes.itemLink} href='/music'>MUSIC</a>
           </li>
           <li className={classes.item}>
-            <a className={classes.itemLink} href='#'>SETTINGS</a>
+            <a className={classes.itemLink} href='/settings'>SETTINGS</a>
           </li>
         </ul>
       </nav>
