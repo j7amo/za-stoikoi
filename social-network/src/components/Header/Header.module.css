@@ -1,0 +1,4 @@
+.header {
+    grid-area: app-header;
+    background-color: wheat;
+}
