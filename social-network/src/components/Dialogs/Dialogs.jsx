@@ -4,18 +4,50 @@ import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
 
 const Dialogs = () => {
+  const dialogsData = [
+    {
+      name: 'Vasya',
+      id: '1',
+    },
+    {
+      name: 'Jora',
+      id: '2',
+    },
+    {
+      name: 'Petya',
+      id: '3',
+    },
+    {
+      name: 'Valera',
+      id: '4',
+    },
+    {
+      name: 'Kolya',
+      id: '5',
+    },
+  ];
+
+  const messagesData = [
+    {
+      text: 'Здоров! Бухаешь?',
+      id: '1',
+    },
+    {
+      text: 'Не, восстанавливаю печень...',
+      id: '2',
+    },
+  ];
+
+  const jsxDialogs = dialogsData.map((dialog) => <Dialog name={dialog.name} id={dialog.id}/>);
+  const jsxMessages = messagesData.map((message) => <Message message={message.text}/>);
+
   return (
       <div className={classes.dialogsContainer}>
         <ul className={classes.dialogs}>
-          <Dialog name='Vasya' id='1'/>
-          <Dialog name='Jora' id='2'/>
-          <Dialog name='Petya' id='3'/>
-          <Dialog name='Valera' id='4'/>
-          <Dialog name='Kolya' id='5'/>
+          {jsxDialogs}
         </ul>
         <ul className={classes.messages}>
-          <Message message='Здоров! Бухаешь?'/>
-          <Message message='Не, восстанавливаю печень...'/>
+          {jsxMessages}
         </ul>
       </div>
   );
