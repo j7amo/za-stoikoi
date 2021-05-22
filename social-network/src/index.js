@@ -4,9 +4,55 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const posts = [
+  {
+    message: 'Пошли бухать!',
+    likesCount: '21',
+  },
+  {
+    message: 'Привет! Как дела?',
+    likesCount: '3',
+  },
+
+];
+
+const dialogsData = [
+  {
+    name: 'Vasya',
+    id: '1',
+  },
+  {
+    name: 'Jora',
+    id: '2',
+  },
+  {
+    name: 'Petya',
+    id: '3',
+  },
+  {
+    name: 'Valera',
+    id: '4',
+  },
+  {
+    name: 'Kolya',
+    id: '5',
+  },
+];
+
+const messagesData = [
+  {
+    text: 'Здоров! Бухаешь?',
+    id: '1',
+  },
+  {
+    text: 'Не, восстанавливаю печень...',
+    id: '2',
+  },
+];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App posts={posts} dialogsData={dialogsData} messagesData={messagesData}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
