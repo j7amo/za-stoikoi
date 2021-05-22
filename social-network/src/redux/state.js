@@ -45,10 +45,12 @@ const state = {
     messagesData: [
       {
         text: 'Здоров! Бухаешь?',
+        messageType: 'receivedMessage',
         id: '1',
       },
       {
-        text: 'Не, восстанавливаю печень...',
+        text: 'Не, печень восстанавливаю...',
+        messageType: 'sentMessage',
         id: '2',
       },
     ],

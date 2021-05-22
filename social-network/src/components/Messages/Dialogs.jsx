@@ -8,7 +8,7 @@ const Dialogs = (props) => {
   const jsxDialogs = props.state.dialogsData.map((dialog) =>
       <Dialog name={dialog.name} avatar={dialog.avatar} id={dialog.id}/>);
   const jsxMessages = props.state.messagesData.map((message) =>
-      <Message message={message.text}/>);
+      <Message message={message.text} messageType={message.messageType}/>);
 
   return (
       <div className={classes.dialogsContainer}>

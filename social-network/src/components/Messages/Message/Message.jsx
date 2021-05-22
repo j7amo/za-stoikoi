@@ -2,7 +2,7 @@ import classes from "./Message.module.css";
 
 const Message = (props) => {
   return (
-      <li className={classes.message}>
+      <li className={classes[props.messageType]}>
         {props.message}
       </li>
   );
