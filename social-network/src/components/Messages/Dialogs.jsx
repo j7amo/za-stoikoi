@@ -5,8 +5,10 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
 
-  const jsxDialogs = props.dialogsData.map((dialog) => <Dialog name={dialog.name} id={dialog.id}/>);
-  const jsxMessages = props.messagesData.map((message) => <Message message={message.text}/>);
+  const jsxDialogs = props.state.dialogsData.map((dialog) =>
+      <Dialog name={dialog.name} avatar={dialog.avatar} id={dialog.id}/>);
+  const jsxMessages = props.state.messagesData.map((message) =>
+      <Message message={message.text}/>);
 
   return (
       <div className={classes.dialogsContainer}>
