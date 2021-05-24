@@ -13,8 +13,8 @@ const state = {
         message: 'Привет! Как дела?',
         likesCount: 3,
       },
-
     ],
+    newPostText: 'Start typing here!',
   },
 
   messagesPage: {
@@ -61,14 +61,20 @@ const state = {
   },
 }
 
-export const addPost = (message) => {
+export const addPost = () => {
   const newPost = {
     id: 5,
-    message: message,
+    message: state.profilePage.newPostText,
     likesCount: 0,
   }
 
   state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = '';
+  renderEntireTree(state);
+};
+
+export const updateNewPostText = (text) => {
+  state.profilePage.newPostText = text;
   renderEntireTree(state);
 };
 

@@ -8,16 +8,19 @@ const MyPosts = (props) => {
 
   const textAreaRef = React.createRef();
 
-  const onAddPostHandler = () => {
-    props.addPost(textAreaRef.current.value);
-    textAreaRef.current.value = '';
+  const onAddPostButtonClickHandler = () => {
+    props.addPost();
+  };
+
+  const onNewPostTextUpdateHandler = () => {
+    props.updateNewPostText(textAreaRef.current.value);
   };
 
   return (
         <div className={classes.posts}>
           <div className={classes.newPost}>
-            <textarea ref={textAreaRef}/>
-            <button onClick={onAddPostHandler}>Add post</button>
+            <textarea onChange={onNewPostTextUpdateHandler} ref={textAreaRef} value={props.newPostText}/>
+            <button onClick={onAddPostButtonClickHandler}>Add post</button>
           </div>
           <div className={classes.existingPosts}>
             {jsxPosts}
