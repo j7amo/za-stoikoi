@@ -1,7 +1,8 @@
 .dialogsContainer {
     display: grid;
     grid-template-areas:
-    'dialogs messages';
+    'dialogs messages'
+    'dialogs newMessage';
     grid-template-columns: 300px 1fr;
     grid-gap: 10px;
 }
@@ -11,6 +12,7 @@
     padding: 20px 5px 5px 20px;
     list-style-type: none;
     margin: 0 50px 0 0;
+    border-right: 5px solid darkgray;
 }
 
 .active {
@@ -23,7 +25,23 @@
     grid-area: messages;
     padding: 20px 20px 5px 50px;
     list-style-type: none;
-    border-left: 5px solid darkgray;
+}
+
+.newMessageContainer {
+    grid-area: newMessage;
+    display: flex;
+    margin: 50px 20px;
+}
+
+.newMessageContainer textarea {
+    flex-grow: 1;
+    margin-right: 50px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.newMessageContainer button {
+    border-radius: 10px;
 }
 
 a {
