@@ -15,7 +15,7 @@ li {
 }
 
 .receivedMessage::before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: 0;
     bottom: 0;
@@ -27,7 +27,7 @@ li {
 }
 
 .receivedMessage::after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -45,7 +45,7 @@ li {
 }
 
 .sentMessage::before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: 0;
     bottom: 0;
@@ -57,7 +57,7 @@ li {
 }
 
 .sentMessage::after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: 1;
     bottom: 0;
