@@ -1,6 +1,22 @@
-import {ActionType} from './state.js';
+import {ActionType} from './store.js';
 
-const profilePageReducer = (state, action) => {
+const initialState = {
+  posts: [
+    {
+      id: 1,
+      message: 'Пошли бухать!',
+      likesCount: 21,
+    },
+    {
+      id: 2,
+      message: 'Привет! Как дела?',
+      likesCount: 3,
+    },
+  ],
+  newPostText: '',
+};
+
+const profilePageReducer = (state = initialState, action) => {
   switch(action.type) {
     case ActionType.ADD_POST:
       const newPost = {
