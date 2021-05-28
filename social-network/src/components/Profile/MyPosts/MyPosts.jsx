@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
-import {addPostActionCreator, newPostTextUpdateActionCreator} from '../../../redux/profile-page-reducer.js';
+
 
 const MyPosts = (props) => {
   const jsxPosts = props.posts.map((post) => <Post message={post.message} likesCount={post.likesCount}/>);
@@ -9,13 +9,12 @@ const MyPosts = (props) => {
   const textAreaRef = React.createRef();
 
   const onAddPostButtonClick = () => {
-    props.dispatch(addPostActionCreator());
+    props.addPostHandler();
   };
 
   const onNewPostTextUpdate = () => {
-    props.dispatch(newPostTextUpdateActionCreator(textAreaRef.current.value));
+    props.updateNewPostTextHandler(textAreaRef.current.value);
   };
-
 
   return (
       <div className={classes.posts}>

@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './Dialogs.module.css'
 import Dialog from './Dialog/Dialog';
 import Message from './Message/Message';
-import {sendMessageActionCreator, newMessageTextUpdateActionCreator} from '../../redux/messages-page-reducer.js';
 
 const Dialogs = (props) => {
 
@@ -14,11 +13,11 @@ const Dialogs = (props) => {
   const textAreaRef = React.createRef();
 
   const onSendMessageButtonClick = () => {
-    props.dispatch(sendMessageActionCreator());
+    props.sendMessageButtonClickHandler();
   };
 
   const onNewMessageTextUpdate = () => {
-    props.dispatch(newMessageTextUpdateActionCreator(textAreaRef.current.value));
+    props.newMessageTextUpdateHandler(textAreaRef.current.value);
   };
 
   return (
