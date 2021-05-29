@@ -5,9 +5,9 @@ import Message from './Message/Message';
 
 const Dialogs = (props) => {
 
-  const jsxDialogs = props.state.dialogsData.map((dialog) =>
+  const jsxDialogs = props.messagesPage.dialogsData.map((dialog) =>
       <Dialog name={dialog.name} avatar={dialog.avatar} id={dialog.id}/>);
-  const jsxMessages = props.state.messagesData.map((message) =>
+  const jsxMessages = props.messagesPage.messagesData.map((message) =>
       <Message message={message.text} messageType={message.messageType}/>);
 
   const textAreaRef = React.createRef();
@@ -29,7 +29,7 @@ const Dialogs = (props) => {
           {jsxMessages}
         </ul>
         <div className={classes.newMessageContainer}>
-          <textarea placeholder='Start typing here!' onChange={onNewMessageTextUpdate} ref={textAreaRef} value={props.state.newMessageText}/>
+          <textarea placeholder='Start typing here!' onChange={onNewMessageTextUpdate} ref={textAreaRef} value={props.messagesPage.newMessageText}/>
           <button onClick={onSendMessageButtonClick}>Send message</button>
         </div>
       </div>
