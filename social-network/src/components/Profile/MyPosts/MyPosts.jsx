@@ -4,7 +4,7 @@ import Post from './Post/Post';
 
 
 const MyPosts = (props) => {
-  const jsxPosts = props.posts.map((post) => <Post message={post.message} likesCount={post.likesCount}/>);
+  const jsxPosts = props.posts.map((post) => <Post message={post.message} key={post.id} likesCount={post.likesCount}/>);
 
   const textAreaRef = React.createRef();
 

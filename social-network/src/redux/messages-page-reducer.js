@@ -50,20 +50,28 @@ const initialState = {
 };
 
 const messagesPageReducer = (state = initialState, action) => {
-  switch(action.type) {
-    case ActionType.SEND_MESSAGE:
-      const newMessage = {
-        id: '5',
-        text: state.newMessageText,
-        messageType: MessageType.SENT,
-      }
 
-      state.messagesData.push(newMessage);
-      state.newMessageText = '';
-      return state;
+  switch (action.type) {
+    case ActionType.SEND_MESSAGE:
+
+      return {
+        ...state,
+        messagesData: [
+          ...state.messagesData,
+          {
+            id: '5',
+            text: state.newMessageText,
+            messageType: MessageType.SENT,
+          }
+        ],
+        newMessageText: '',
+      };
+
     case ActionType.UPDATE_NEW_MESSAGE_TEXT:
-      state.newMessageText = action.text;
-      return state;
+      return {
+        ...state,
+        newMessageText: action.text,
+      };
     default:
       return state;
   }

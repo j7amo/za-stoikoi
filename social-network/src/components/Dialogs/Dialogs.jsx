@@ -6,9 +6,9 @@ import Message from './Message/Message';
 const Dialogs = (props) => {
 
   const jsxDialogs = props.messagesPage.dialogsData.map((dialog) =>
-      <Dialog name={dialog.name} avatar={dialog.avatar} id={dialog.id}/>);
+      <Dialog name={dialog.name} avatar={dialog.avatar} key={dialog.id} id={dialog.id}/>);
   const jsxMessages = props.messagesPage.messagesData.map((message) =>
-      <Message message={message.text} messageType={message.messageType}/>);
+      <Message message={message.text} messageType={message.messageType} key={message.id}/>);
 
   const textAreaRef = React.createRef();
 
